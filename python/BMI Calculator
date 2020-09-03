@@ -1,0 +1,33 @@
+name = input('Please enter your name: ')
+weight = input('Please enter Weight (kg): ')
+while weight <= str(0):
+    weight = input('Please enter Weight again (kg): ')
+else:
+    height = input('Please enter height (m): ')
+
+while height <= str(0):
+    height = input('Please enter height again (m): ')
+else:
+    height = float(height)
+    weight = float(weight)
+    bmi = weight / (height * height)
+
+if bmi < 24:
+   patient_status = 'under weight'
+
+elif bmi <= 29:
+    patient_status = 'Healthy'
+
+elif bmi <= 34:
+    patient_status = 'Overweight'
+
+else:
+    patient_status = 'Obese'
+
+bmi = round(bmi)
+
+print('Calculating your result..')
+print()
+print('Hello ' +name )
+print('Your BMI is ' + str(bmi))
+print('You are ' + patient_status + '!')
